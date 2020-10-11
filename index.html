@@ -12,19 +12,28 @@ cada input en una linea distinta -->
   .inline-element {
     display: inline;
   }
+
+   .outlinenone {
+     outline: none;
+     background-color: rgb(0, 78, 59);
+     border-radius: 5px;
+     border: 1px solid #39c;
+   }
+
+
 </style>
 
 <!-- La etiqueta <form> es opcional en ciertos casos, acá la hemos omitido
 para que veas que el HTML es muy permisivo en estos casos. -->
 
 <p>Ingrega tu username:</p>
-<input type="text" />
+<input type="textInput"  class="outlinenone"  />
 
 <p>Ingrega tu password:</p>
-<input type="password" />
+<input type="password" class="outlinenone" />
 
 <p>Ingrega tu email</p>
-<input type="email" />
+<input type="email"  class="outlinenone"/>
 
 <p>Deseo recordar mis datos de login:</p>
 si <input class="inline-element" type="checkbox" /> no
