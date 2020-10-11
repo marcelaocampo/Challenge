@@ -1,0 +1,63 @@
+<!-- El input por defecto es un elemento inline, pero con el selector
+input podemos sobre escribir esa propiedad, para que se renderice 
+cada input en una linea distinta -->
+<style>
+  input {
+    /* intenta quitar esta regla y veras como se acomodan los inputs
+    uno al lado del otro */
+    display: block;
+  }
+  /* creamos la clase inline-element para especificar que estos elementos
+  deberán de estar en linea uno al lado del otro */
+  .inline-element {
+    display: inline;
+  }
+</style>
+
+<!-- La etiqueta <form> es opcional en ciertos casos, acá la hemos omitido
+para que veas que el HTML es muy permisivo en estos casos. -->
+
+<p>Ingrega tu username:</p>
+<input type="text" />
+
+<p>Ingrega tu password:</p>
+<input type="password" />
+
+<p>Ingrega tu email</p>
+<input type="email" />
+
+<p>Deseo recordar mis datos de login:</p>
+si <input class="inline-element" type="checkbox" /> no
+<input class="inline-element" type="checkbox" />
+
+<p>Ingresa tu fecha de nacimiento:</p>
+<input type="date" />
+
+<p>Escoge tu color favorito</p>
+<input type="color" />
+
+<!-- con la etiqueta <br> podemos hacer un espacio en blanco -->
+<br />
+
+<p>El clima en mi ciudad esta:</p>
+
+<span class="inline-element">caliente</span>
+<input class="inline-element" type="range" />
+<span class="inline-element">frio</span>
+
+<br />
+<br />
+<br />
+
+<!-- también podemos usar etiqueta span para almacenar texto -->
+<span>Mi plato favorito es:</span>
+
+<!-- la etiqueta <select> es un caso especial donde no necesita de una 
+  etiqueta <input> -->
+<select>
+  <option>hamburguesa</option>
+  <option>pizza</option>
+  <option>pasta</option>
+  <option>ensalada</option>
+  <option>todos los anteriores</option>
+</select>
