@@ -2,64 +2,72 @@
 input podemos sobre escribir esa propiedad, para que se renderice 
 cada input en una linea distinta -->
 <style>
-  input {
-    /* intenta quitar esta regla y veras como se acomodan los inputs
-    uno al lado del otro */
-    display: block;
-  }
+ input[type=text]:focus {
+    background-color: #f1eff3;
+}
   /* creamos la clase inline-element para especificar que estos elementos
   deberán de estar en linea uno al lado del otro */
   .inline-element {
     display: inline;
   }
 
-   .outlinenone {
-     outline: none;
-     background-color: rgb(0, 78, 59);
-     border-radius: 5px;
-     border: 1px solid #39c;
-   }
+  input[type=password]:focus {
+    background-color: #f1eff3;
+}
+select {
+    width: 50%;
+    padding: 18px 22px;
+    border: none;
+    border-radius: 5px;
+    color: rgb(75, 4, 4);
+    background-color: #d6cedf;  
+}
 
-
+input[type=radio]:checked {
+    background-color:#06F;
+    border-left-color:#06F;
+    border-right-color:#06F;
+}
 </style>
 
 <!-- La etiqueta <form> es opcional en ciertos casos, acá la hemos omitido
 para que veas que el HTML es muy permisivo en estos casos. -->
 
 <p>Ingrega tu username:</p>
-<input type="textInput"  class="outlinenone"  />
+<input type="text" class="" />
 
 <p>Ingrega tu password:</p>
-<input type="password" class="outlinenone" />
+<input type="password" />
+
 
 <p>Ingrega tu email</p>
-<input type="email"  class="outlinenone"/>
+<input type="email" />
 
 <p>Deseo recordar mis datos de login:</p>
-si <input class="inline-element" type="checkbox" /> no
-<input class="inline-element" type="checkbox" />
+<input type="radio" name="my-input" id="yes">
+<label for="yes">Si</label>
+
+<input type="radio" name="my-input" id="no">
+<label for="no">No</label>
 
 <p>Ingresa tu fecha de nacimiento:</p>
 <input type="date" />
 
 <p>Escoge tu color favorito</p>
 <input type="color" />
+<span class="inline-element">frio</span>
 
 <!-- con la etiqueta <br> podemos hacer un espacio en blanco -->
 <br />
-
 <p>El clima en mi ciudad esta:</p>
 
 <span class="inline-element">caliente</span>
 <input class="inline-element" type="range" />
-<span class="inline-element">frio</span>
-
-<br />
-<br />
 <br />
 
 <!-- también podemos usar etiqueta span para almacenar texto -->
 <span>Mi plato favorito es:</span>
+
 
 <!-- la etiqueta <select> es un caso especial donde no necesita de una 
   etiqueta <input> -->
@@ -70,3 +78,4 @@ si <input class="inline-element" type="checkbox" /> no
   <option>ensalada</option>
   <option>todos los anteriores</option>
 </select>
+
